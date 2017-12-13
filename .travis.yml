@@ -6,7 +6,7 @@ deploy:
     provider: script
     script: npm run deploy
     on:
-      branch: master
+      branch: gh-pages
   - skip_cleanup: true
     provider: script
     script: npm run deploy-branch
