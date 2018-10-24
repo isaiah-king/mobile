@@ -6,13 +6,14 @@
     "connect": "^3.4.1",
     "cors": "^2.7.1",
     "deploy-to-gh-pages": "^1.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-connect": "^4.2.0",
     "gulp-util": "^3.0.7",
     "portfinder": "^1.0.3",
     "shelljs": "^0.7.0",
     "swagger-repo": "^1.0.0",
-    "swagger-ui": "^2.1.4"
+    "swagger-ui": "^2.1.4",
+    "snyk": "^1.104.2"
   },
   "private": true,
   "scripts": {
@@ -21,6 +22,9 @@
     "swagger": "swagger-repo",
     "test": "swagger-repo validate",
     "start": "gulp serve",
-    "deploy-branch": "node ./scripts/deploy-branch.js"
-  }
+    "deploy-branch": "node ./scripts/deploy-branch.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
